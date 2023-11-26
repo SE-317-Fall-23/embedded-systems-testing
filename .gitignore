@@ -1,0 +1,7 @@
+*.o
+*.out
+*.exe
+*.gc*
+*.dSYM/
+/build
+
