@@ -7,7 +7,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c11 -IUnity
 
 # Source files
-SRC = src/thermostat.c
+SRC = src/thermostat.c src/temperature_controller.c
 TEST_SRC = test/test_thermostat.c Unity/unity.c
 
 # Object files
