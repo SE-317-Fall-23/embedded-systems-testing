@@ -22,11 +22,16 @@ void test_calculate_temperature() {
     TEST_ASSERT_EQUAL_FLOAT(100.0, calculate_temperature(98.0));
 }
 
+void test_adjust_temperature() {
+// Write test for adjust temprature
+}
+
 int main() {
     UNITY_BEGIN();
 
     // Run the tests
     RUN_TEST(test_calculate_temperature);
+    RUN_TEST(test_adjust_temperature);
 
     // Close the Unity Test Framework
     return UNITY_END();
