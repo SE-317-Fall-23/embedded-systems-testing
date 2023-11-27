@@ -16,15 +16,26 @@ OBJ = $(SRC:.c=.o) $(TEST_SRC:.c=.o)
 # Executable
 TARGET = thermostat_test
 
+# Check the operating system
+ifeq ($(OS),Windows_NT)
+    # Windows settings
+    TARGET_EXT = .exe
+    RM = del /Q
+else
+    # Linux settings
+    TARGET_EXT =
+    RM = rm -f
+endif
+
 .PHONY: all clean
 
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@$(TARGET_EXT) $^
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(TARGET) $(OBJ)
+	$(RM) $(TARGET)$(TARGET_EXT) $(OBJ)
