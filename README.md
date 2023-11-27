@@ -1,4 +1,4 @@
-### Smart Thermostat Testing
+# Smart Thermostat Testing
 
 In this assignment, you will work with a thermostat module designed to dynamically adjust and manage temperatures within a defined range. The provided code includes two essential components: the [temperature_controller](src/temperature_controller.c) and the [thermostat](src/thermostat.c).
 
@@ -30,10 +30,15 @@ The `thermostat` module introduces advanced temperature adjustment features. By 
 3. **Invalid Inputs:**
    - Examine how the system handles unexpected or invalid inputs.
    - Ensure that error-handling mechanisms are effective.
+  
+## Testing Library
+- This repo uses [Unity Testing Framework](https://www.throwtheswitch.org/unity) (not to be confused with Unity gaming engine)
+- Refer to the link above for documentation on how to write the tests.
 
 ### Setup command
-* Use the codespaces environment to write your code
-* In your Github repo, click Code dropdown, then click Codespaces and click Create codespace on master 
+* Use the codespaces environment to write your code. To use it, open your Github repo, click Code dropdown, then click Codespaces and click Create codespace on master 
 * Run `make` in the terminal to compile the project. Then run '.\thermostat_test' to run the tests
-* There is one failing test in the repo. 
+* You can run this on your local computer if you have GCC (the compiler) setup.
+* There is one failing test in the repo. So the builds on the Github actions will fail. Once you fix the test, the build will pass.
+
 
