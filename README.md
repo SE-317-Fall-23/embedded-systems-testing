@@ -35,5 +35,5 @@ The `thermostat` module introduces advanced temperature adjustment features. By 
 * Use the codespaces environment to write your code
 * In your Github repo, click Code dropdown, then click Codespaces and click Create codespace on master 
 * Run `make` in the terminal to compile the project. Then run '.\thermostat_test' to run the tests
-
+* There is one failing test in the repo. 
 
