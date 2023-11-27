@@ -1,12 +1,19 @@
 #include "unity.h"
 #include "../src/thermostat.h"
+#include "../src/temperature_controller.h"
 
 void setUp() {
+    set_temperature(24.0);
     // Optional: Set up resources before each test
 }
 
 void tearDown() {
     // Optional: Clean up resources after each test
+}
+
+void test_set_get_temperature() {
+    set_temperature(30.0);
+    TEST_ASSERT_EQUAL_FLOAT(31.0, get_current_temperature());
 }
 
 void test_calculate_temperature() {
@@ -30,8 +37,10 @@ int main() {
     UNITY_BEGIN();
 
     // Run the tests
+    // Any new test file should be added here
     RUN_TEST(test_calculate_temperature);
     RUN_TEST(test_adjust_temperature);
+    RUN_TEST(test_set_get_temperature);
 
     // Close the Unity Test Framework
     return UNITY_END();

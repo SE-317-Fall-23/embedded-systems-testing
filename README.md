@@ -1,18 +1,39 @@
 ### Smart Thermostat Testing
 
- In this assignment, you'll be working with a thermostat module designed to adjust and manage temperatures within a defined range. The provided code includes two key components: the [temperature_controller](src/temperature_controller.c) and the [thermostat](src/thermostat.c).
+In this assignment, you will work with a thermostat module designed to dynamically adjust and manage temperatures within a defined range. The provided code includes two essential components: the [temperature_controller](src/temperature_controller.c) and the [thermostat](src/thermostat.c).
 
-The temperature_controller module enables you to set and retrieve temperature values, providing a foundational functionality for temperature management. This module would interact with the thermostat module which introduces more advanced temperature adjustment features.
+## Components Overview:
 
-The thermostat module allows users to dynamically adjust temperatures based on predefined logic. By default, a fixed offset of 2 degrees Celsius is applied to the user input. Additionally, users have the flexibility to define custom offsets, providing a personalized touch to temperature adjustments.
+### 1. temperature_controller Module
+The `temperature_controller` module provides fundamental functionality for setting and retrieving temperature values. Your task is to write comprehensive tests for this module, focusing on:
 
-Your task involves writing tests for these modules to ensure their proper functioning in various scenarios. Focus on validating the core features, such as accurate temperature adjustment, adherence to specified temperature ranges, and seamless integration between the temperature_controller and thermostat.
+- **Setting and Retrieving Values:** Verify that the module accurately sets and retrieves temperature values.
 
-Consider edge cases, normal use cases, and potential invalid inputs during your testing process. The goal is to create a suite of tests that assesses the reliability of these components.
+### 2. thermostat Module
+The `thermostat` module introduces advanced temperature adjustment features. By default, a fixed offset of 2 degrees Celsius is applied to user input. Users can also define custom offsets for personalized temperature adjustments. Your testing for this module should encompass:
+
+- **Default Offset Application:** Confirm that the thermostat module correctly applies the default offset of 2 degrees Celsius to user input.
+- **Custom Offset Configuration:** Test the ability of users to define custom offsets and ensure that the thermostat adjusts temperatures accordingly.
+- **Temperature Range Adherence:** Validate that the thermostat maintains temperatures within the specified range.
+- **Integration Testing:** Assure seamless integration between the `temperature_controller` and `thermostat` modules by thoroughly testing the `adjust_temperature` function.
+
+## Testing Guidelines:
+
+1. **Edge Cases:**
+   - Test scenarios at the lower and upper bounds of the temperature range.
+   - Assess how the system handles extreme temperatures.
+
+2. **Normal Use Cases:**
+   - Test typical temperature adjustments within the standard range.
+   - Evaluate responses to common user inputs.
+
+3. **Invalid Inputs:**
+   - Examine how the system handles unexpected or invalid inputs.
+   - Ensure that error-handling mechanisms are effective.
 
 ### Setup command
 * Use the codespaces environment to write your code
 * In your Github repo, click Code dropdown, then click Codespaces and click Create codespace on master 
-* Run `make test` in the terminal to compile the project. Then run '.\thermostat_test' to run the tests
+* Run `make` in the terminal to compile the project. Then run '.\thermostat_test' to run the tests
 
 
